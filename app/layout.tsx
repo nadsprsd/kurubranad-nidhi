@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
+import { headers } from "next/headers";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { WhatsappButton } from "@/components/ui/whatsapp-button";
@@ -34,7 +35,15 @@ export const metadata: Metadata = {
     : undefined,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Reading the nonce via headers() here is what tells Next.js to embed the
+  // same nonce into the inline hydration/streaming <script> tags it
+  // generates internally — without this call, Next has no way to know a
+  // strict CSP is in effect and emits those scripts with no nonce at all,
+  // which the browser then blocks (this was the actual cause of the white
+  // screen: middleware alone wasn't enough).
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
+
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <body>

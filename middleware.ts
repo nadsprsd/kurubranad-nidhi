@@ -26,6 +26,12 @@ export function middleware(request: NextRequest) {
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-nonce", nonce);
+  // This line was missing. Next.js reads the CSP (and its nonce) off the
+  // REQUEST object — not just the response — to auto-nonce the inline
+  // hydration/streaming <script> tags it injects internally. Without this,
+  // every one of those scripts gets blocked by the browser and the page
+  // never hydrates, which is exactly what caused the white screen.
+  requestHeaders.set("Content-Security-Policy", csp);
 
   const response = NextResponse.next({ request: { headers: requestHeaders } });
   response.headers.set("Content-Security-Policy", csp);
