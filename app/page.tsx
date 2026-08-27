@@ -14,6 +14,8 @@ import { WhatsappQuoteCta } from "@/components/ui/whatsapp-quote-cta";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { TeamTeaser } from "@/components/ui/team-teaser";
 import { Testimonials } from "@/components/ui/testimonials";
+import { BranchesPreview } from "@/components/ui/branches-preview";
+import { branches } from "@/config/branches";
 
 export const metadata: Metadata = buildMetadata(pageSeo.home);
 
@@ -119,20 +121,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service area */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <SectionHeading heading={serviceArea.heading} body={serviceArea.body} as="h2" />
-        <ul className="mt-8 flex flex-wrap gap-3">
-          {serviceArea.areas.map((area) => (
-            <li
-              key={area}
-              className="rounded-full border border-navy/15 bg-white px-4 py-2 text-sm text-ink/80"
-            >
-              {area}
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* Branches preview */}
+      <BranchesPreview heading={serviceArea.heading} body={serviceArea.body} branches={branches} />
 
       {/* FAQ preview */}
       <section className="bg-surface-grey">
