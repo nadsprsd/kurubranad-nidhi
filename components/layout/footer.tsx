@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { primaryNav, footerLegalNav } from "@/config/navigation";
 
@@ -10,10 +11,16 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-12 sm:gap-10 md:grid-cols-4">
           <div>
-            <p className="font-display font-semibold text-lg text-surface-warm">{siteConfig.companyName}</p>
-            <p className="mt-1.5 text-sm font-body uppercase tracking-wide text-gold-light">
-              {siteConfig.brandName}
-            </p>
+            <div className="inline-block rounded-lg bg-surface-warm p-2.5">
+              <Image
+                src="/images/brand/logo-full.png"
+                alt={`${siteConfig.companyName} logo`}
+                width={140}
+                height={110}
+                className="h-auto w-28"
+              />
+            </div>
+            <p className="mt-4 text-sm italic text-gold-light">&ldquo;{siteConfig.tagline}&rdquo;</p>
             <address className="mt-5 not-italic text-sm leading-relaxed">
               {siteConfig.contact.addressLines.map((line) => (
                 <span key={line} className="block">

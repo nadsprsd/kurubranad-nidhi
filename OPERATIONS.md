@@ -241,7 +241,7 @@ without any of this setup or ongoing cost.
 ## 11. Google Business Profile setup instructions
 
 1. Go to [Google Business Profile](https://business.google.com) and create
-   or claim the listing for Kurubranad Nidhi Limited / Kurubranad Gold Loan
+   or claim the listing for Kurumbranad Nidhi Limited / Kurumbranad Gold Loan
    using the **verified** registered address and phone number only.
 2. Select the most accurate business category (do not select "Bank" — use a
    category consistent with the company's actual legal structure, e.g. a

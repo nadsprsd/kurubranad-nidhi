@@ -5,11 +5,13 @@ import { siteConfig } from "@/config/site";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { EnquiryForm } from "@/components/forms/enquiry-form";
 import { WhatsappQuoteCta } from "@/components/ui/whatsapp-quote-cta";
+import { BranchesList } from "@/components/ui/branches-list";
+import { branches } from "@/config/branches";
 
 export const metadata: Metadata = buildMetadata(pageSeo.contact);
 
 export default function ContactPage() {
-  const { hero, formNote } = contactContent;
+  const { hero, formNote, branches: branchesCopy } = contactContent;
   const { contact } = siteConfig;
 
   return (
@@ -28,7 +30,7 @@ export default function ContactPage() {
         <div className="mt-12 grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h2 className="font-display text-lg text-navy">Office</h2>
+              <h2 className="font-display text-lg text-navy">Registered Office (Perambra)</h2>
               <address className="mt-2 not-italic text-sm leading-relaxed text-ink/75">
                 {contact.addressLines.map((line) => (
                   <span key={line} className="block">
@@ -94,6 +96,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <BranchesList heading={branchesCopy.heading} body={branchesCopy.body} branches={branches} />
     </>
   );
 }

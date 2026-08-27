@@ -1,62 +1,64 @@
 /**
  * CENTRAL SITE CONFIGURATION
  * ---------------------------------------------------------------------------
- * Every value marked "TODO(CLIENT)" is a placeholder and MUST be replaced
- * with client-verified information before launch. Do not invent values.
- * Legal/financial claims must be reviewed by the client's CA/CS/legal counsel
- * before publishing (see CLIENT_APPROVAL_CHECKLIST.md).
+ * Values below marked "TODO(CLIENT)" are still placeholders. Everything else
+ * was sourced directly from the client's own corporate profile PDF and
+ * branch signage photos, so it's real — but still worth a final read-through
+ * by the client before launch, since a couple of details (see notes) were
+ * time-sensitive when the PDF was written and may need reconfirming.
  */
 
 export const siteConfig = {
-  companyName: "Kurubranad Nidhi Limited",
-  brandName: "Kurubranad Gold Loan",
-  shortName: "Kurubranad",
+  companyName: "Kurumbranad Nidhi Limited",
+  brandName: "Kurumbranad Gold Loan",
+  shortName: "Kurumbranad",
 
-  // TODO(CLIENT): Replace with the final production domain.
-  url: "https://www.kurubranadnidhi.example.com",
+  // TODO(CLIENT): Replace with the final production domain once purchased.
+  url: "https://www.kurumbranadgoldloan.example.com",
 
-  // TODO(CLIENT): Confirm final tagline wording with the client before launch.
-  tagline: "A member-first Nidhi, rooted in Perambra.",
+  tagline: "We make your dream easy",
 
   description:
-    "Kurubranad Nidhi Limited serves members in Perambra, Kerala with savings, deposits, and gold-backed loan enquiries — offered subject to eligibility, documentation, company policy, and applicable regulations.",
+    "Kurumbranad Gold Loan is a gold-backed lending institution serving members across Kozhikode and Kannur districts, Kerala, with savings, deposits, and gold loan services — offered subject to eligibility, documentation, company policy, and applicable regulations.",
 
   contact: {
-    // TODO(CLIENT): Verified registered office address required.
+    // Registered / first branch address, from the client's corporate profile PDF.
     addressLines: [
-      "TODO(CLIENT): Building / Door No.",
-      "TODO(CLIENT): Street / Locality",
-      "Perambra, Kerala — TODO(CLIENT): PIN CODE",
+      "Door No: 5/821-A, Old EMS Hospital Road",
+      "Opposite Perambra Market",
+      "Perambra, Kerala — 673525",
       "India",
     ],
-    // TODO(CLIENT): Verified landline/mobile number required.
-    phoneDisplay: "TODO(CLIENT): +91 XXXXX XXXXX",
-    phoneHref: "tel:+91XXXXXXXXXX",
-    // TODO(CLIENT): Confirm WhatsApp business number.
-    whatsappDisplay: "TODO(CLIENT): +91 XXXXX XXXXX",
-    whatsappHref: "https://wa.me/91XXXXXXXXXX",
-    // TODO(CLIENT): Verified official email address required.
-    email: "TODO(CLIENT)@kurubranadnidhi.example.com",
-    // TODO(CLIENT): Replace with the verified Google Maps place link.
-    mapsUrl: "https://maps.google.com/?q=TODO-CLIENT-VERIFIED-ADDRESS",
-    // Office hours — TODO(CLIENT): confirm actual hours.
+    // Toll-free number from the client's corporate profile PDF and branch signage.
+    phoneDisplay: "8089 099 196",
+    phoneHref: "tel:+918089099196",
+    // TODO(CLIENT): Confirm this is also the correct WhatsApp Business number —
+    // the PDF only lists it as a general/toll-free contact number.
+    whatsappDisplay: "8089 099 196",
+    whatsappHref: "https://wa.me/918089099196",
+    email: "nidhi.kurumbranad@gmail.com",
+    // TODO(CLIENT): Replace with the verified Google Maps place link for the Perambra branch.
+    mapsUrl: "https://maps.google.com/?q=Kurumbranad+Nidhi+Limited+Perambra+Kerala",
+    // TODO(CLIENT): Confirm official office hours.
     hours: "TODO(CLIENT): e.g. Mon–Sat, 9:30 AM – 5:30 PM",
   },
 
   legal: {
-    // TODO(CLIENT): Corporate Identification Number, if applicable, from ROC records only.
+    // TODO(CLIENT): CIN not shown in any supplied material — provide from ROC records only.
     cin: "TODO(CLIENT): CIN (verified, ROC records only)",
-    // TODO(CLIENT): Registered legal structure, confirmed by company secretary.
-    legalStructure: "TODO(CLIENT): e.g. Nidhi Company registered under the Companies Act, 2013",
-    // TODO(CLIENT): Regulatory/registration details — do not infer or invent.
-    registrationDetails: "TODO(CLIENT): Registrar of Companies details, registration number, date of incorporation",
+    legalStructure: "Nidhi company",
+    // Per-branch licence numbers ARE shown in the supplied signage photos —
+    // captured in branches.ts. TODO(CLIENT): confirm CIN and any additional
+    // registration numbers not visible on signage.
+    registrationDetails:
+      "TODO(CLIENT): Full Registrar of Companies details and date of incorporation, beyond the per-branch licence numbers already on file.",
     disclaimer:
-      "Kurubranad Nidhi Limited is not a bank or NBFC. Services described on this website are offered to eligible members only, subject to eligibility, documentation, company policy, and applicable regulations. Figures, rates, and terms shown are illustrative only until confirmed by the company and reviewed by qualified legal/compliance counsel.",
+      "Kurumbranad Nidhi Limited is a Nidhi company and is not a bank or NBFC. Services described on this website are offered to eligible members only, subject to eligibility, documentation, company policy, and applicable regulations. Figures, rates, and terms shown are illustrative only until confirmed by the company and reviewed by qualified legal/compliance counsel.",
   },
 
   social: {
-    // TODO(CLIENT): Add only official, client-confirmed social profiles. Leave empty otherwise.
-    facebook: "",
+    facebook: "https://www.facebook.com/100083632792276/",
+    // TODO(CLIENT): Add Instagram/YouTube only once official accounts are confirmed.
     instagram: "",
     youtube: "",
   },

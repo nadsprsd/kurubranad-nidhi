@@ -9,38 +9,30 @@
 
 export const homeContent = {
   hero: {
-    eyebrow: "Kurubranad Gold Loan · Perambra, Kerala",
+    eyebrow: "Kurumbranad Gold Loan · Perambra, Kerala",
     heading: "Your gold, your family's next step forward.",
-    body: "For generations, families in and around Perambra have turned gold into opportunity — school fees, a small business, a wedding, a medical need. Kurubranad Nidhi Limited exists to make that step simple, respectful, and close to home.",
+    body: "For generations, families in and around Perambra have turned gold into opportunity — school fees, a small business, a wedding, a medical need. Kurumbranad Nidhi Limited exists to make that step simple, respectful, and close to home.",
     primaryCta: { label: "Enquire Now", href: "/contact" },
     secondaryCta: { label: "Explore Gold Loan", href: "/gold-loan" },
     imageAlt:
       "A Kerala gold loan officer carefully weighing a customer's jewellery on a digital scale inside a well-lit branch office",
   },
   stats: {
-    // TODO(CLIENT): Every figure below is a placeholder. We do not publish
-    // member counts, years of operation, branch counts, or loan volumes
-    // until the client supplies and confirms the real numbers — inventing
-    // statistics for a financial services company is not something we do,
-    // even for placeholder/preview purposes.
-    heading: "Kurubranad at a glance",
+    // Sourced from the client's corporate profile PDF and branch signage —
+    // real figures, not placeholders. TODO(CLIENT): reconfirm branch count
+    // if the Chalode branch's opening status has changed since the PDF was written.
+    heading: "Kurumbranad at a glance",
     items: [
-      { label: "Members served", value: "TODO(CLIENT)" },
-      { label: "Years in Perambra", value: "TODO(CLIENT)" },
-      { label: "Branch location", value: "Perambra, Kerala" },
-      { label: "Regulatory structure", value: "TODO(CLIENT)" },
+      { label: "Established", value: "2020" },
+      { label: "Branches", value: "5" },
+      { label: "Districts served", value: "Kozhikode & Kannur" },
+      { label: "Structure", value: "Nidhi Company" },
     ],
   },
-  leadership: {
-    heading: "A message from our leadership",
-    // TODO(CLIENT): Replace with a real quote, name, and designation from
-    // an actual director/officer of the company, along with an approved
-    // photograph. Nothing here is published until supplied and approved.
-    quote:
-      "TODO(CLIENT): A short, genuine message from a director or senior officer about why Kurubranad exists and what members can expect — in their own words.",
-    name: "TODO(CLIENT): Name",
-    designation: "TODO(CLIENT): Designation",
-    imageAlt: "Portrait of a Kurubranad Nidhi Limited director — to be supplied by the client",
+  team: {
+    heading: "Meet our directors",
+    body: "Kurumbranad Nidhi Limited is led by a four-member board with backgrounds spanning banking, risk management, and export trade.",
+    cta: { label: "Meet the full board", href: "/about#board" },
   },
   testimonials: {
     heading: "What our members say",
@@ -55,7 +47,7 @@ export const homeContent = {
   },
   services: {
     heading: "Services for our members",
-    body: "Kurubranad Nidhi Limited offers a small set of member-focused financial services, each explained plainly and offered subject to eligibility, documentation, company policy, and applicable regulations.",
+    body: "Kurumbranad Nidhi Limited offers a small set of member-focused financial services, each explained plainly and offered subject to eligibility, documentation, company policy, and applicable regulations.",
     items: [
       {
         title: "Gold Loan",
@@ -84,13 +76,13 @@ export const homeContent = {
     ],
   },
   whyUs: {
-    heading: "Why members choose Kurubranad",
-    body: "TODO(CLIENT): Replace with client-verified differentiators. No statistics, awards, or claims are published until confirmed.",
+    heading: "Why members choose Kurumbranad",
+    body: "From one branch in Perambra in 2020 to five branches across Kozhikode and Kannur districts today, growth has followed trust rather than the other way around.",
     points: [
       {
         title: "Local, face-to-face service",
         description:
-          "Based in Perambra, we work with members in person — not through a call centre.",
+          "Branches across Perambra, Kannur, and Kozhikode districts mean members deal with people, not a call centre.",
       },
       {
         title: "Plain-language terms",
@@ -100,7 +92,7 @@ export const homeContent = {
       {
         title: "Careful handling of your gold",
         description:
-          "Valuation and custody follow documented internal procedures — see our Compliance page.",
+          "Professional valuation and secure custody follow documented internal procedures — see our Compliance page.",
       },
     ],
   },
@@ -135,14 +127,9 @@ export const homeContent = {
     cta: { label: "Read our compliance information", href: "/compliance" },
   },
   serviceArea: {
-    heading: "Serving Perambra and nearby areas",
-    body: "TODO(CLIENT): Confirm the exact towns/panchayats served before publishing this list.",
-    areas: [
-      "Perambra",
-      "TODO(CLIENT): Nearby area 2",
-      "TODO(CLIENT): Nearby area 3",
-      "TODO(CLIENT): Nearby area 4",
-    ],
+    heading: "Five branches across Kozhikode and Kannur",
+    body: "Kurumbranad Gold Loan now serves members from five branch locations. Visit whichever is closest to you, or reach out online first — see our Contact page for full addresses.",
+    areas: ["Perambra", "Thazhe Chovva, Kannur", "Keezhur, Iritty", "Balussery, Kozhikode", "Chalode, Kannur"],
   },
   faqPreview: {
     heading: "Common questions",
@@ -173,51 +160,51 @@ export const homeContent = {
 
 export const aboutContent = {
   hero: {
-    heading: "About Kurubranad Nidhi Limited",
-    body: "TODO(CLIENT): Replace with the client's verified company story. Do not publish founding narrative details until confirmed.",
-    imageAlt:
-      "Exterior view of a modest local office building in Perambra, Kerala, representative of a community financial services branch",
+    heading: "About Kurumbranad Nidhi Limited",
+    body: "Kurumbranad Gold Loan is a gold-backed lending institution that provides financial assistance to customers by accepting gold ornaments as collateral. Our objective is to offer gold loan services tailored to members' financial needs, while prioritising trust, transparency, prompt service, and responsible financial transactions.",
+    imageAlt: "Kurumbranad Gold Loan branch signage in Perambra, Kerala",
   },
   video: {
-    heading: "Get to know Kurubranad",
+    heading: "Get to know Kurumbranad",
     body: "TODO(CLIENT): A short video introduction will appear here once supplied.",
   },
   facts: {
     heading: "Verified company facts",
-    body: "TODO(CLIENT): Every fact below must be supplied and verified by the client before publishing. Placeholders are shown for structure only.",
+    body: "Sourced directly from Kurumbranad's own corporate profile.",
     items: [
-      { label: "Legal structure", value: "TODO(CLIENT)" },
-      { label: "Year established", value: "TODO(CLIENT)" },
-      { label: "Registered office", value: "TODO(CLIENT)" },
-      { label: "Regulatory registration", value: "TODO(CLIENT)" },
+      { label: "Legal structure", value: "Nidhi company" },
+      { label: "Year established", value: "2020" },
+      { label: "First branch", value: "Perambra, Kerala" },
+      { label: "Branches today", value: "5, across Kozhikode & Kannur districts" },
     ],
   },
   vision: {
     heading: "Vision",
-    body: "TODO(CLIENT): Supply the company's approved vision statement.",
+    body: "To be a world-class financial institution affording comprehensive and ready access to high-quality financial services and building long-term partnerships with our members. Our success is measured not only in economic terms but by the respect, trust, and credibility we earn.",
   },
   mission: {
     heading: "Mission",
-    body: "TODO(CLIENT): Supply the company's approved mission statement.",
+    body: "To achieve complete customer satisfaction through efficient, professional, and courteous service — and to keep developing practical financial solutions that meet our members' expectations and improve their income and socio-economic standing.",
   },
-  philosophy: {
-    heading: "Operating philosophy",
-    body: "TODO(CLIENT): Supply verified detail on how the company approaches lending, savings, and member service.",
+  coreValues: {
+    heading: "Core values",
+    items: ["Integrity", "Goals", "Innovation", "Quality", "Excellence"],
   },
   memberFocus: {
     heading: "A member-centric approach",
     body: "We aim to treat every member enquiry as a conversation, not a transaction — explaining terms clearly and never asking for more than is required to serve you responsibly.",
   },
   leadership: {
-    heading: "Leadership",
-    body: "TODO(CLIENT): Leadership names, roles, and photographs to be supplied and approved by the client before publishing.",
+    heading: "Board of Directors",
+    id: "board",
+    body: "Kurumbranad Nidhi Limited is led by a four-member board with backgrounds in export trade, risk management, and banking.",
   },
 };
 
 export const servicesContent = {
   hero: {
     heading: "Member services",
-    body: "The services below are offered to eligible members, subject to eligibility, documentation, company policy, and applicable regulations. Rates, limits, and tenures are placeholders pending client and legal approval.",
+    body: "The services below are confirmed as offered by Kurumbranad, per branch signage and corporate materials — offered to eligible members, subject to eligibility, documentation, company policy, and applicable regulations. Specific rates, limits, and tenures are placeholders pending client and legal approval.",
   },
   services: [
     {
@@ -242,9 +229,9 @@ export const servicesContent = {
         "TODO(CLIENT): List required documents and eligibility criteria.",
     },
     {
-      title: "Member Loan Services",
+      title: "Mortgage Loan",
       description:
-        "TODO(CLIENT): Describe permitted member loan services precisely as approved by legal/compliance.",
+        "TODO(CLIENT): Describe mortgage loan terms precisely as approved by legal/compliance.",
       docsNote:
         "TODO(CLIENT): List required documents and eligibility criteria.",
     },
@@ -256,7 +243,7 @@ export const servicesContent = {
     },
   ],
   disclaimer:
-    "All services are offered to eligible members only, subject to eligibility, documentation, company policy, and applicable regulations. Kurubranad Nidhi Limited is not a bank or NBFC, and no service described here should be understood as a guaranteed-return investment or government-backed scheme.",
+    "All services are offered to eligible members only, subject to eligibility, documentation, company policy, and applicable regulations. Kurumbranad Nidhi Limited is not a bank or NBFC, and no service described here should be understood as a guaranteed-return investment or government-backed scheme.",
 };
 
 export const goldLoanContent = {
@@ -272,12 +259,15 @@ export const goldLoanContent = {
   },
   benefits: {
     heading: "What members can expect",
-    body: "TODO(CLIENT): Confirm each benefit below before publishing — no rate, speed, or limit claims are published without written client approval.",
+    body: "Key features of our gold loan service, as set out in our own corporate profile.",
     items: [
-      "In-person, transparent valuation of your jewellery",
-      "Documented custody procedures while your loan is active",
-      "Plain-language explanation of terms before you commit",
-      "TODO(CLIENT): Additional confirmed benefit",
+      "Fast loan processing",
+      "Transparent procedures",
+      "Professional gold valuation",
+      "Secure gold custody",
+      "Clear loan terms",
+      "Customer-friendly service",
+      "Repayment monitoring",
     ],
   },
   process: {
@@ -334,21 +324,27 @@ export const goldLoanContent = {
 export const corporateProfileContent = {
   hero: {
     heading: "Corporate Profile",
-    body: "This page summarises Kurubranad Nidhi Limited's corporate profile for general information only. It is not an investor offer, solicitation, or guarantee of any kind.",
+    body: "This page summarises Kurumbranad Nidhi Limited's corporate profile for general information only. It is not an investor offer, solicitation, or guarantee of any kind.",
   },
   disclaimer:
     "This corporate profile is provided for general information only and does not constitute an offer, solicitation, or invitation to invest. Any figures relating to growth, expansion, or future plans are indicative and subject to change.",
   overview: {
     heading: "Company overview",
-    body: "TODO(CLIENT): Supply the approved corporate-profile narrative to be rewritten into this section. Nothing is published here until the client provides source content.",
+    body: "Kurumbranad Gold Loan began operations in Perambra, Kozhikode, in 2020, with the aim of understanding customers' financial needs and providing a loan facility that is quickly and easily accessible against gold security. Starting on a limited scale, the institution has grown steadily as it earned the trust and support of its members — expanding from one branch to five across Kozhikode and Kannur districts within six years.",
+  },
+  growthStory: {
+    heading: "Our branches",
+    // TODO(CLIENT): confirm the Chalode branch's current status before publishing —
+    // see the note in config/branches.ts.
+    body: "Each branch opening has been marked by the local Panchayat or Municipality leadership, reflecting Kurumbranad's community-first approach.",
   },
   structure: {
     heading: "Organisational structure",
-    body: "TODO(CLIENT): Supply verified organisational/governance structure.",
+    body: "Kurumbranad Nidhi Limited is governed by a four-member Board of Directors — see the About page for full profiles. TODO(CLIENT): supply any additional organisational/governance detail beyond the board itself.",
   },
   futurePlans: {
     heading: "Future plans (indicative)",
-    body: "TODO(CLIENT): Any forward-looking plans must be clearly labelled indicative and reviewed by legal/compliance before publishing.",
+    body: "TODO(CLIENT): Any forward-looking plans beyond the branches already listed must be clearly labelled indicative and reviewed by legal/compliance before publishing.",
   },
   downloadPlaceholder: {
     heading: "Downloadable corporate profile",
@@ -360,15 +356,15 @@ export const corporateProfileContent = {
 export const complianceContent = {
   hero: {
     heading: "Compliance & Governance",
-    body: "This page explains, in general terms, how Kurubranad Nidhi Limited approaches legal structure, verification, and member protection. All content below is subject to verification and applicable law, and is pending final legal review.",
+    body: "This page explains, in general terms, how Kurumbranad Nidhi Limited approaches legal structure, verification, and member protection. All content below is subject to verification and applicable law, and is pending final legal review.",
   },
   legalStructure: {
     heading: "Legal structure",
-    body: "TODO(CLIENT): Confirm legal structure (e.g. Nidhi company under the Companies Act, 2013) with company secretary before publishing.",
+    body: "Kurumbranad Nidhi Limited operates as a Nidhi company. TODO(CLIENT): confirm the exact statutory reference (e.g. under the Companies Act, 2013) with your company secretary before publishing.",
   },
   statutory: {
     heading: "Statutory & governance information",
-    body: "TODO(CLIENT): Supply verified statutory registration numbers, regulator details, and governance information.",
+    body: "Individual branches operate under state-issued licence numbers — for example, licence 32120375095 (Thazhe Chovva, Kannur) and licence 32120394445 (Keezhur, Iritty). TODO(CLIENT): supply the company's CIN and any additional registration numbers not shown on branch signage, and confirm all licence numbers are current.",
   },
   kyc: {
     heading: "KYC and verification",
@@ -380,7 +376,7 @@ export const complianceContent = {
   },
   valuationCustody: {
     heading: "Gold valuation and custody",
-    body: "Gold offered as loan security is valued and stored under a documented internal procedure. TODO(CLIENT): Confirm procedure detail and any insurance arrangements before publishing.",
+    body: "Gold offered as loan security is professionally valued and held under secure custody procedures for the duration of the loan. TODO(CLIENT): confirm further procedure detail and any insurance arrangements before publishing.",
   },
   grievance: {
     heading: "Grievance redressal",
@@ -406,8 +402,12 @@ export const complianceContent = {
 export const contactContent = {
   hero: {
     heading: "Contact Us",
-    body: "Reach out with questions about savings, deposits, or a gold loan enquiry. We do not collect Aadhaar, PAN, OTPs, bank credentials, or financial documents through this form.",
+    body: "Reach out with questions about savings, deposits, or a gold loan enquiry — or find the Kurumbranad branch nearest you below. We do not collect Aadhaar, PAN, OTPs, bank credentials, or financial documents through this form.",
   },
   formNote:
-    "Fields marked required must be completed. We'll never ask for sensitive documents or codes through this form — that happens only in person at our office.",
+    "Fields marked required must be completed. We'll never ask for sensitive documents or codes through this form — that happens only in person at a branch.",
+  branches: {
+    heading: "Our branches",
+    body: "Five branches across Kozhikode and Kannur districts, and growing.",
+  },
 };

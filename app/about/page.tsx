@@ -2,14 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { buildMetadata, pageSeo } from "@/config/seo";
 import { aboutContent } from "@/config/content";
+import { directors } from "@/config/directors";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { VideoPlaceholder } from "@/components/ui/video-placeholder";
+import { CoreValues } from "@/components/ui/core-values";
+import { BoardOfDirectors } from "@/components/ui/board-of-directors";
 
 export const metadata: Metadata = buildMetadata(pageSeo.about);
 
 export default function AboutPage() {
-  const { hero, video, facts, vision, mission, philosophy, memberFocus, leadership } = aboutContent;
+  const { hero, video, facts, vision, mission, coreValues, memberFocus, leadership } = aboutContent;
 
   return (
     <>
@@ -22,9 +25,8 @@ export default function AboutPage() {
             <p className="mt-5 text-ink/80 leading-relaxed">{hero.body}</p>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-            {/* TODO(CLIENT): replace with approved office/team photography */}
             <Image
-              src="/images/about-local-office.jpg"
+              src="/images/branches/branch-perambra.jpg"
               alt={hero.imageAlt}
               fill
               sizes="(min-width: 1024px) 560px, 100vw"
@@ -65,18 +67,14 @@ export default function AboutPage() {
 
       <section className="bg-surface-grey">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-display text-2xl text-navy">{philosophy.heading}</h2>
-          <p className="mt-3 text-ink/80 leading-relaxed">{philosophy.body}</p>
+          <CoreValues heading={coreValues.heading} items={coreValues.items} />
 
-          <h2 className="mt-10 font-display text-2xl text-navy">{memberFocus.heading}</h2>
+          <h2 className="mt-12 font-display text-2xl text-navy">{memberFocus.heading}</h2>
           <p className="mt-3 text-ink/80 leading-relaxed">{memberFocus.body}</p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="font-display text-2xl text-navy">{leadership.heading}</h2>
-        <p className="mt-3 text-ink/80 leading-relaxed">{leadership.body}</p>
-      </section>
+      <BoardOfDirectors heading={leadership.heading} body={leadership.body} directors={directors} id={leadership.id} />
     </>
   );
 }

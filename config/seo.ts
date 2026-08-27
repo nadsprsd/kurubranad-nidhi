@@ -43,43 +43,43 @@ export const pageSeo = {
   home: {
     title: `${siteConfig.companyName} | Gold Loan in Perambra, Kerala`,
     description:
-      "Kurubranad Nidhi Limited — member savings, deposits, and gold loan enquiries in Perambra, Kerala. Enquire today, subject to eligibility and applicable regulations.",
+      "Kurumbranad Nidhi Limited — member savings, deposits, and gold loan enquiries in Perambra, Kerala. Enquire today, subject to eligibility and applicable regulations.",
     path: "/",
   },
   about: {
     title: "About Us",
     description:
-      "Learn about Kurubranad Nidhi Limited, a member-focused Nidhi based in Perambra, Kerala.",
+      "Learn about Kurumbranad Nidhi Limited, a member-focused Nidhi based in Perambra, Kerala.",
     path: "/about",
   },
   services: {
     title: "Member Services",
     description:
-      "Savings, recurring deposit, fixed deposit, and gold loan services for eligible members of Kurubranad Nidhi Limited.",
+      "Savings, recurring deposit, fixed deposit, and gold loan services for eligible members of Kurumbranad Nidhi Limited.",
     path: "/services",
   },
   goldLoan: {
     title: "Gold Loan in Perambra, Kerala",
     description:
-      "Explore Kurubranad Gold Loan — transparent, in-person gold-backed lending in Perambra, Kerala. Enquire now.",
+      "Explore Kurumbranad Gold Loan — transparent, in-person gold-backed lending in Perambra, Kerala. Enquire now.",
     path: "/gold-loan",
   },
   corporateProfile: {
     title: "Corporate Profile",
     description:
-      "An overview of Kurubranad Nidhi Limited's corporate profile, structure, and indicative future plans.",
+      "An overview of Kurumbranad Nidhi Limited's corporate profile, structure, and indicative future plans.",
     path: "/corporate-profile",
   },
   compliance: {
     title: "Compliance & Governance",
     description:
-      "Kurubranad Nidhi Limited's approach to legal structure, KYC, internal controls, and grievance redressal.",
+      "Kurumbranad Nidhi Limited's approach to legal structure, KYC, internal controls, and grievance redressal.",
     path: "/compliance",
   },
   contact: {
     title: "Contact Us",
     description:
-      "Get in touch with Kurubranad Nidhi Limited in Perambra, Kerala for savings, deposit, or gold loan enquiries.",
+      "Get in touch with Kurumbranad Nidhi Limited in Perambra, Kerala for savings, deposit, or gold loan enquiries.",
     path: "/contact",
   },
 } as const;

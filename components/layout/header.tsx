@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { primaryNav } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 import { MobileNavigation } from "./mobile-navigation";
@@ -9,14 +10,17 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2 font-display text-lg text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          className="flex items-center gap-2.5 font-display text-lg text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
         >
-          {/* TODO(CLIENT): Replace with the approved logo mark (SVG preferred) */}
-          <span
-            aria-hidden="true"
-            className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold bg-navy font-display text-sm font-semibold text-gold-light"
-          >
-            KN
+          <span className="relative h-9 w-11 shrink-0">
+            <Image
+              src="/images/brand/logo-icon.png"
+              alt=""
+              fill
+              sizes="44px"
+              className="object-contain"
+              priority
+            />
           </span>
           <span className="leading-tight">
             <span className="block text-sm md:text-base">{siteConfig.companyName}</span>

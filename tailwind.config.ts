@@ -10,9 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#0B1F3A",
-          deep: "#081627",
-          light: "#16305A",
+          DEFAULT: "#262A6B", // deepened toward the brand's real navy for large surfaces
+          deep: "#181B4D",
+          light: "#333477", // the brand's literal logo navy — used for accents/hovers
+        },
+        brandred: {
+          DEFAULT: "#EC2127", // sampled directly from the real logo
+          dark: "#B8151B",
         },
         gold: {
           DEFAULT: "#B8975A",

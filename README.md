@@ -1,7 +1,7 @@
-# Kurubranad Nidhi Limited — Marketing & Enquiry Website
+# Kurumbranad Nidhi Limited — Marketing & Enquiry Website
 
-A seven-page marketing and enquiry website for Kurubranad Nidhi Limited
-(brand: **Kurubranad Gold Loan**), Perambra, Kerala. Built with Next.js App
+A seven-page marketing and enquiry website for Kurumbranad Nidhi Limited
+(brand: **Kurumbranad Gold Loan**), Perambra, Kerala. Built with Next.js App
 Router, React, TypeScript, and Tailwind CSS. **No customer login, dashboard,
 loan management, or payment processing** — this is enquiry-only, by design.
 

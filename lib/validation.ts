@@ -29,7 +29,7 @@ export const enquirySchema = z.object({
     .min(2, "Please tell us your preferred branch or area.")
     .max(100),
   service: z.enum(
-    ["gold-loan", "savings", "recurring-deposit", "fixed-deposit", "member-loan", "general"],
+    ["gold-loan", "savings", "recurring-deposit", "fixed-deposit", "mortgage-loan", "general"],
     { errorMap: () => ({ message: "Please select a service." }) }
   ),
   approxRequirement: z.string().trim().max(100).optional().or(z.literal("")),
@@ -54,6 +54,6 @@ export const serviceOptions: { value: EnquiryFormData["service"]; label: string 
   { value: "savings", label: "Savings" },
   { value: "recurring-deposit", label: "Recurring Deposit" },
   { value: "fixed-deposit", label: "Fixed Deposit" },
-  { value: "member-loan", label: "Member Loan Services" },
+  { value: "mortgage-loan", label: "Mortgage Loan" },
   { value: "general", label: "General Enquiry" },
 ];

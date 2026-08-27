@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata, pageSeo } from "@/config/seo";
 import { homeContent } from "@/config/content";
+import { directors } from "@/config/directors";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card } from "@/components/ui/card";
 import { LinkButton } from "@/components/ui/button";
@@ -11,13 +12,13 @@ import { Faq } from "@/components/ui/faq";
 import { FaqJsonLd } from "@/components/seo/json-ld";
 import { WhatsappQuoteCta } from "@/components/ui/whatsapp-quote-cta";
 import { StatsBar } from "@/components/ui/stats-bar";
-import { LeadershipMessage } from "@/components/ui/leadership-message";
+import { TeamTeaser } from "@/components/ui/team-teaser";
 import { Testimonials } from "@/components/ui/testimonials";
 
 export const metadata: Metadata = buildMetadata(pageSeo.home);
 
 export default function HomePage() {
-  const { hero, stats, leadership, testimonials, services, whyUs, process, trust, serviceArea, faqPreview, contactCta } = homeContent;
+  const { hero, stats, team, testimonials, services, whyUs, process, trust, serviceArea, faqPreview, contactCta } = homeContent;
 
   return (
     <>
@@ -43,7 +44,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
             {/* TODO(CLIENT): replace stock image with approved branch/customer photography */}
             <Image
-              src="/images/hero-gold-loan-valuation.jpg"
+              src="/images/branches/branch-thazhechovva.jpg"
               alt={hero.imageAlt}
               fill
               priority
@@ -68,7 +69,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Kurubranad */}
+      {/* Why Kurumbranad */}
       <section className="bg-surface-grey">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading heading={whyUs.heading} body={whyUs.body} as="h2" />
@@ -83,13 +84,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <LeadershipMessage
-        heading={leadership.heading}
-        quote={leadership.quote}
-        name={leadership.name}
-        designation={leadership.designation}
-        imageAlt={leadership.imageAlt}
-      />
+      <TeamTeaser heading={team.heading} body={team.body} directors={directors} cta={team.cta} />
 
       {/* Process */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">

@@ -234,7 +234,7 @@ export function EnquiryForm() {
             className="mt-1 h-4 w-4 rounded border-navy/30 text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
           />
           <span>
-            I agree to be contacted by Kurubranad Nidhi Limited about this enquiry. I understand no sensitive
+            I agree to be contacted by Kurumbranad Nidhi Limited about this enquiry. I understand no sensitive
             documents or codes (Aadhaar, PAN, OTP, bank details) will be requested online.
           </span>
         </label>
