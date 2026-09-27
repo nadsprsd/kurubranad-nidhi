@@ -93,7 +93,7 @@ export function LeadPopup() {
         <div className="relative h-36 w-full">
           {/* TODO(CLIENT): replace with an approved gold-loan or branch photograph */}
           <Image
-            src="/images/gold-loan-valuation-closeup.jpg"
+            src="/images/branches/branch-thazhechovva.jpg"
             alt=""
             fill
             sizes="448px"

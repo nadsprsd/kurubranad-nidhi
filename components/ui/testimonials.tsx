@@ -4,6 +4,7 @@ interface TestimonialItem {
   quote: string;
   name: string;
   area: string;
+  note?: string;
 }
 
 interface TestimonialsProps {
@@ -30,6 +31,7 @@ export function Testimonials({ heading, body, items }: TestimonialsProps) {
                 <p className="font-display text-lg italic leading-relaxed text-navy">&ldquo;{item.quote}&rdquo;</p>
                 <p className="mt-4 text-sm font-semibold text-navy">{item.name}</p>
                 <p className="text-xs text-ink/50">{item.area}</p>
+                {item.note ? <p className="mt-2 text-[11px] text-ink/35">{item.note}</p> : null}
               </div>
             ))}
           />

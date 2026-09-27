@@ -5,7 +5,7 @@ import { aboutContent } from "@/config/content";
 import { directors } from "@/config/directors";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { VideoPlaceholder } from "@/components/ui/video-placeholder";
+import { DirectorVideo } from "@/components/ui/director-video";
 import { CoreValues } from "@/components/ui/core-values";
 import { BoardOfDirectors } from "@/components/ui/board-of-directors";
 
@@ -36,7 +36,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <VideoPlaceholder heading={video.heading} body={video.body} />
+      <DirectorVideo heading={video.heading} body={video.body} />
 
       <section className="bg-surface-grey">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">

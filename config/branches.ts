@@ -78,9 +78,9 @@ export const branches: Branch[] = [
     id: "balussery",
     name: "Balussery Branch",
     areaLabel: "Balussery, Kozhikode",
-    // TODO(CLIENT): Full door number / street address for the Balussery
-    // branch wasn't visible in the supplied photo — please confirm.
-    addressLines: ["Balussery, Kozhikode", "TODO(CLIENT): Full address"],
+    // Full door/street number wasn't visible in the supplied photo — using
+    // the confirmed area name only until the client provides the rest.
+    addressLines: ["Balussery, Kozhikode"],
     image: "/images/branches/branch-balussery.jpg",
     imageAlt: "Kurumbranad Gold Loan branch storefront at Balussery, Kozhikode",
     inaugurated: { date: "26 August 2025", by: "Smt. Krishnaveni Manikkoth, President, Nanmada Grama Panchayat" },

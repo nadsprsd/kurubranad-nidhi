@@ -13,8 +13,8 @@ import { FaqJsonLd } from "@/components/seo/json-ld";
 import { WhatsappQuoteCta } from "@/components/ui/whatsapp-quote-cta";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { TeamTeaser } from "@/components/ui/team-teaser";
-import { Testimonials } from "@/components/ui/testimonials";
 import { BranchesPreview } from "@/components/ui/branches-preview";
+import { Testimonials } from "@/components/ui/testimonials";
 import { branches } from "@/config/branches";
 
 export const metadata: Metadata = buildMetadata(pageSeo.home);

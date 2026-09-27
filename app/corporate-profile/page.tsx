@@ -43,7 +43,7 @@ export default function CorporateProfilePage() {
         <h2 className="font-display text-2xl text-navy">{downloadPlaceholder.heading}</h2>
         <p className="mt-3 text-ink/80 leading-relaxed">{downloadPlaceholder.body}</p>
         {!downloadPlaceholder.available ? (
-          <p className="mt-3 text-sm text-ink/50">TODO(CLIENT): Supply final approved PDF to enable this download.</p>
+          <p className="mt-3 text-sm text-ink/50">A downloadable PDF will be added here soon.</p>
         ) : null}
       </section>
     </>

@@ -24,7 +24,7 @@ export default function ServicesPage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
             {/* TODO(CLIENT): replace with approved customer-support imagery */}
             <Image
-              src="/images/services-customer-support.jpg"
+              src="/images/branches/branch-balussery.jpg"
               alt="A financial services staff member assisting a customer at a branch desk, reviewing documents together"
               fill
               sizes="(min-width: 1024px) 560px, 100vw"
