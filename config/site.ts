@@ -13,8 +13,10 @@ export const siteConfig = {
   brandName: "Kurumbranad Gold Loan",
   shortName: "Kurumbranad",
 
-  // Confirmed real domain, printed on the client's own marketing material.
-  url: "https://www.kurumbranadnidhi.com",
+  // Confirmed real, purchased domain. Note: the client's marketing flyer
+  // actually printed "www.kurumbranadnidhi.com" instead — worth flagging
+  // to them that their own print material has the wrong domain on it.
+  url: "https://www.kurumbranadgoldloan.com",
 
   tagline: "We make your dream easy",
 
