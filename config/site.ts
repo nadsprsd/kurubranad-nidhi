@@ -13,8 +13,8 @@ export const siteConfig = {
   brandName: "Kurumbranad Gold Loan",
   shortName: "Kurumbranad",
 
-  // Not yet purchased — update once the client has chosen a domain, then redeploy.
-  url: "https://www.kurumbranadgoldloan.example.com",
+  // Confirmed real domain, printed on the client's own marketing material.
+  url: "https://www.kurumbranadnidhi.com",
 
   tagline: "We make your dream easy",
 
@@ -29,9 +29,13 @@ export const siteConfig = {
       "Perambra, Kozhikode, Kerala — 673525",
       "India",
     ],
-    // Primary contact number, given directly by the client.
+    // Primary mobile contact number, given directly by the client.
     phoneDisplay: "8891 118 188",
     phoneHref: "tel:+918891118188",
+    // Landline, printed on marketing material (0496 is the Kozhikode STD
+    // code) — kept separate from the mobile number above.
+    landlineDisplay: "0496 299 6448",
+    landlineHref: "tel:+914962996448",
     // The toll-free/WhatsApp number from the corporate profile PDF and branch
     // signage is kept here for WhatsApp specifically, since it's the number
     // printed on the "GOLD LOAN DELIVERED AT YOUR DOORSTEP" promotional

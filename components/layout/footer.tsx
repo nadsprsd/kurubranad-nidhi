@@ -43,6 +43,14 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href={siteConfig.contact.landlineHref}
+                  className="hover:text-gold-light underline-offset-2 hover:underline"
+                >
+                  {siteConfig.contact.landlineDisplay} (landline)
+                </a>
+              </li>
+              <li>
+                <a
                   href={siteConfig.contact.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"

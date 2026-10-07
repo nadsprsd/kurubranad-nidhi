@@ -5,10 +5,13 @@ import { useState, type ReactNode } from "react";
 interface CarouselProps {
   slides: ReactNode[];
   ariaLabel: string;
+  /** "light" (default) for use on light backgrounds; "dark" for use on navy/dark sections. */
+  theme?: "light" | "dark";
 }
 
-export function Carousel({ slides, ariaLabel }: CarouselProps) {
+export function Carousel({ slides, ariaLabel, theme = "light" }: CarouselProps) {
   const [index, setIndex] = useState(0);
+  const isDark = theme === "dark";
 
   function go(next: number) {
     setIndex((next + slides.length) % slides.length);
@@ -41,7 +44,11 @@ export function Carousel({ slides, ariaLabel }: CarouselProps) {
               type="button"
               onClick={() => go(index - 1)}
               aria-label="Previous"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/20 text-navy hover:border-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              className={`flex h-9 w-9 items-center justify-center rounded-full border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                isDark
+                  ? "border-surface-warm/30 text-surface-warm hover:border-surface-warm"
+                  : "border-navy/20 text-navy hover:border-navy"
+              }`}
             >
               <span aria-hidden="true">&#8592;</span>
             </button>
@@ -54,7 +61,7 @@ export function Carousel({ slides, ariaLabel }: CarouselProps) {
                   aria-label={`Go to slide ${i + 1}`}
                   aria-current={i === index}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                    i === index ? "bg-gold-dark" : "bg-navy/20"
+                    i === index ? "bg-gold-dark" : isDark ? "bg-surface-warm/25" : "bg-navy/20"
                   }`}
                 />
               ))}
@@ -63,7 +70,11 @@ export function Carousel({ slides, ariaLabel }: CarouselProps) {
               type="button"
               onClick={() => go(index + 1)}
               aria-label="Next"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/20 text-navy hover:border-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              className={`flex h-9 w-9 items-center justify-center rounded-full border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                isDark
+                  ? "border-surface-warm/30 text-surface-warm hover:border-surface-warm"
+                  : "border-navy/20 text-navy hover:border-navy"
+              }`}
             >
               <span aria-hidden="true">&#8594;</span>
             </button>

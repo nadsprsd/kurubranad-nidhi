@@ -42,7 +42,7 @@ export default function GoldLoanPage() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
             {/* TODO(CLIENT): replace with approved valuation/custody photography */}
             <Image
-              src="/images/branches/branch-keezhur.jpg"
+              src="/images/promotions/branch-perambra-promo-4.jpg"
               alt={hero.imageAlt}
               fill
               priority

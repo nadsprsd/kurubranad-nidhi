@@ -57,6 +57,12 @@ export default function ContactPage() {
               >
                 {contact.phoneDisplay}
               </a>
+              <a
+                href={contact.landlineHref}
+                className="mt-1 block text-sm text-ink/75 underline-offset-2 hover:text-navy hover:underline"
+              >
+                {contact.landlineDisplay} (landline)
+              </a>
             </div>
 
             <div>

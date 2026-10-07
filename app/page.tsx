@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata, pageSeo } from "@/config/seo";
 import { homeContent } from "@/config/content";
@@ -10,7 +9,7 @@ import { LinkButton } from "@/components/ui/button";
 import { Cta } from "@/components/ui/cta";
 import { Faq } from "@/components/ui/faq";
 import { FaqJsonLd } from "@/components/seo/json-ld";
-import { WhatsappQuoteCta } from "@/components/ui/whatsapp-quote-cta";
+import { HeroCarousel } from "@/components/ui/hero-carousel";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { TeamTeaser } from "@/components/ui/team-teaser";
 import { BranchesPreview } from "@/components/ui/branches-preview";
@@ -24,38 +23,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-navy">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
-          <div>
-            <p className="font-body text-xs font-semibold uppercase tracking-[0.14em] text-gold-light">
-              {hero.eyebrow}
-            </p>
-            <h1 className="mt-4 font-display text-4xl leading-tight text-surface-warm md:text-5xl">
-              {hero.heading}
-            </h1>
-            <p className="mt-5 max-w-lg text-surface-warm/80 leading-relaxed">{hero.body}</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <LinkButton href={hero.primaryCta.href}>{hero.primaryCta.label}</LinkButton>
-              <LinkButton href={hero.secondaryCta.href} variant="secondary">
-                {hero.secondaryCta.label}
-              </LinkButton>
-              <WhatsappQuoteCta />
-            </div>
-          </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-            {/* TODO(CLIENT): replace stock image with approved branch/customer photography */}
-            <Image
-              src="/images/branches/branch-thazhechovva.jpg"
-              alt={hero.imageAlt}
-              fill
-              priority
-              sizes="(min-width: 1024px) 560px, 100vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      <HeroCarousel title={hero.title} primaryCta={hero.primaryCta} secondaryCta={hero.secondaryCta} />
 
       <StatsBar heading={stats.heading} items={stats.items} />
 

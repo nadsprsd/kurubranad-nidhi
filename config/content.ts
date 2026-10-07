@@ -9,13 +9,9 @@
 
 export const homeContent = {
   hero: {
-    eyebrow: "Kurumbranad Gold Loan · Perambra, Kerala",
-    heading: "Your gold, your family's next step forward.",
-    body: "For generations, families in and around Perambra have turned gold into opportunity — school fees, a small business, a wedding, a medical need. Kurumbranad Nidhi Limited exists to make that step simple, respectful, and close to home.",
+    title: "Kurumbranad Gold Loan — Perambra, Kannur, Kerala",
     primaryCta: { label: "Enquire Now", href: "/contact" },
     secondaryCta: { label: "Explore Gold Loan", href: "/gold-loan" },
-    imageAlt:
-      "A Kerala gold loan officer carefully weighing a customer's jewellery on a digital scale inside a well-lit branch office",
   },
   stats: {
     // Sourced from the client's corporate profile PDF and branch signage —
@@ -265,7 +261,7 @@ export const goldLoanContent = {
     heading: "Gold Loan",
     body: "A gold loan lets you borrow against jewellery you already own, with your gold held securely until repayment. Terms below are explained in general terms only — final rates and limits are confirmed in person and pending client/legal approval.",
     imageAlt:
-      "Close-up of a bank officer's hands carefully examining gold jewellery next to a digital weighing scale and valuation paperwork",
+      "Kurumbranad Gold Loan's Perambra branch storefront, with a fixed deposit offer and branch inauguration photo",
   },
   intro: {
     heading: "How gold-backed lending works",
