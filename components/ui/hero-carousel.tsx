@@ -26,8 +26,14 @@ export function HeroCarousel({ title, primaryCta, secondaryCta }: HeroCarouselPr
           <Carousel
             ariaLabel="Current offers"
             theme="dark"
+            autoPlay
+            autoPlayInterval={5000}
             slides={slides.map((slide) => (
-              <div key={slide.src} className="relative aspect-[1124/944] w-full">
+              // Fixed height rather than a fixed aspect ratio, since the
+              // slides are supplied print banners that don't all share the
+              // same ratio — object-contain + a set height keeps every
+              // slide readable without cropping or stretching any of them.
+              <div key={slide.src} className="relative h-56 w-full sm:h-72">
                 <Image
                   src={slide.src}
                   alt={slide.alt}

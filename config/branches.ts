@@ -96,10 +96,12 @@ export const branches: Branch[] = [
       "Edayannur (PO), Kannur — 670595",
     ],
     phone: "8089 099 196",
-    // TODO(CLIENT): confirm whether this branch has opened as of the
-    // inauguration date below — the PDF was prepared shortly before it.
-    image: "/images/branches/branch-perambra.jpg", // TODO(CLIENT): no Chalode-specific photo supplied yet
-    imageAlt: "Kurumbranad Gold Loan — Chalode branch (photo pending)",
+    // Real inauguration photo supplied by the client. Status is kept as
+    // "opening-soon" since that's how the client referred to this branch
+    // when sharing the photo — flag if the branch is actually fully open
+    // now and this should flip to "open".
+    image: "/images/branches/branch-chalode.jpg",
+    imageAlt: "Ribbon-cutting inauguration ceremony at the Kurumbranad Gold Loan Chalode branch",
     inaugurated: { date: "18 August 2026", by: "Mr. Sajeevan C., President, Keezhallur Grama Panchayat" },
     status: "opening-soon",
   },

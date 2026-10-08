@@ -41,9 +41,9 @@ export function buildMetadata({ title, description, path }: PageSeo): Metadata {
 
 export const pageSeo = {
   home: {
-    title: `${siteConfig.companyName} | Gold Loan in Perambra, Kerala`,
+    title: `${siteConfig.brandName} | Perambra, Kannur, Kerala`,
     description:
-      "Kurumbranad Nidhi Limited — member savings, deposits, and gold loan enquiries in Perambra, Kerala. Enquire today, subject to eligibility and applicable regulations.",
+      "Kurumbranad Gold Loan — member savings, deposits, and gold loan enquiries across Perambra, Kannur, and Kozhikode, Kerala. Enquire today, subject to eligibility and applicable regulations.",
     path: "/",
   },
   about: {

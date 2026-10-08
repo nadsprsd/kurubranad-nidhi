@@ -22,12 +22,7 @@ export function Header() {
               priority
             />
           </span>
-          <span className="leading-tight">
-            <span className="block text-sm md:text-base">{siteConfig.companyName}</span>
-            <span className="block text-[11px] font-body font-medium uppercase tracking-wide text-gold-dark">
-              {siteConfig.brandName}
-            </span>
-          </span>
+          <span className="block text-sm md:text-base">{siteConfig.brandName}</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">

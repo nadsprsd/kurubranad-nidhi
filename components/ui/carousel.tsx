@@ -1,24 +1,59 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 interface CarouselProps {
   slides: ReactNode[];
   ariaLabel: string;
   /** "light" (default) for use on light backgrounds; "dark" for use on navy/dark sections. */
   theme?: "light" | "dark";
+  /** Auto-advance slides every few seconds. Off by default; pauses on hover/focus, and never runs if the visitor prefers reduced motion. */
+  autoPlay?: boolean;
+  /** Milliseconds between auto-advances. */
+  autoPlayInterval?: number;
 }
 
-export function Carousel({ slides, ariaLabel, theme = "light" }: CarouselProps) {
+export function Carousel({
+  slides,
+  ariaLabel,
+  theme = "light",
+  autoPlay = false,
+  autoPlayInterval = 5000,
+}: CarouselProps) {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const isDark = theme === "dark";
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   function go(next: number) {
     setIndex((next + slides.length) % slides.length);
   }
 
+  useEffect(() => {
+    if (!autoPlay || paused || slides.length <= 1) return;
+    const prefersReducedMotion =
+      typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
+    timerRef.current = setInterval(() => {
+      setIndex((current) => (current + 1) % slides.length);
+    }, autoPlayInterval);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [autoPlay, autoPlayInterval, paused, slides.length]);
+
   return (
-    <div role="region" aria-label={ariaLabel} className="relative">
+    <div
+      role="region"
+      aria-label={ariaLabel}
+      className="relative"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
       <div className="overflow-hidden">
         <div
           className="flex transition-transform duration-300 ease-out"
