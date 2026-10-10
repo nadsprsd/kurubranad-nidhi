@@ -186,7 +186,7 @@ export const aboutContent = {
     heading: "Verified company facts",
     body: "Sourced directly from Kurumbranad's own corporate profile.",
     items: [
-      { label: "Legal structure", value: "Nidhi company" },
+      { label: "Legal structure", value: "Nidhi and Gold Loan Company" },
       { label: "Year established", value: "2020" },
       { label: "First branch", value: "Perambra, Kerala" },
       { label: "Branches today", value: "5, across Kozhikode & Kannur districts" },

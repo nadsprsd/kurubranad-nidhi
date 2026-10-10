@@ -1,16 +1,10 @@
 /**
  * BRANCH DATA
  * ---------------------------------------------------------------------------
- * Sourced directly from the client's corporate profile PDF and branch
- * signage photographs. Inauguration details are kept for the "our story"
- * narrative on the Corporate Profile page, not published as standalone
- * claims elsewhere.
- *
- * NOTE ON BRANCH 5 (Chalode): the PDF describes this as inaugurating on
- * 18 August 2026 — which, depending on today's date, may already have
- * happened by the time this site goes live. TODO(CLIENT): confirm whether
- * this branch has opened yet, and update its status/copy accordingly
- * before publishing.
+ * Sourced directly from the client's corporate profile PDF, branch signage
+ * photographs, and direct client confirmation. Inauguration details are
+ * kept for the "our story" narrative on the Corporate Profile page, not
+ * published as standalone claims elsewhere.
  */
 
 export interface Branch {
@@ -78,9 +72,11 @@ export const branches: Branch[] = [
     id: "balussery",
     name: "Balussery Branch",
     areaLabel: "Balussery, Kozhikode",
-    // Full door/street number wasn't visible in the supplied photo — using
-    // the confirmed area name only until the client provides the rest.
-    addressLines: ["Balussery, Kozhikode"],
+    addressLines: [
+      "Door No. 15E, KG Arcade, Balussery Mukku",
+      "Kozhikode Road, Opposite ICICI Bank",
+      "Kozhikode, Kerala — 673612",
+    ],
     image: "/images/branches/branch-balussery.jpg",
     imageAlt: "Kurumbranad Gold Loan branch storefront at Balussery, Kozhikode",
     inaugurated: { date: "26 August 2025", by: "Smt. Krishnaveni Manikkoth, President, Nanmada Grama Panchayat" },
@@ -92,17 +88,14 @@ export const branches: Branch[] = [
     areaLabel: "Chalode, Kannur",
     addressLines: [
       "Building No. KLP-1/687-F, 687 G, C Vee Complex",
-      "Near H.P Petrol Pump, Kannur Road, Chalode",
+      "Near Bharat Petrol Pump, Kannur Road, Chalode",
       "Edayannur (PO), Kannur — 670595",
     ],
     phone: "8089 099 196",
-    // Real inauguration photo supplied by the client. Status is kept as
-    // "opening-soon" since that's how the client referred to this branch
-    // when sharing the photo — flag if the branch is actually fully open
-    // now and this should flip to "open".
     image: "/images/branches/branch-chalode.jpg",
     imageAlt: "Ribbon-cutting inauguration ceremony at the Kurumbranad Gold Loan Chalode branch",
     inaugurated: { date: "18 August 2026", by: "Mr. Sajeevan C., President, Keezhallur Grama Panchayat" },
-    status: "opening-soon",
+    // Client confirmed this branch is now fully open — "Opening soon" badge removed.
+    status: "open",
   },
 ];

@@ -41,8 +41,7 @@ export const directors: Director[] = [
     designation: "Director",
     bulletPoints: [
       "Holds an MBA from Calicut University",
-      "Began his career with the Kuwait Army",
-      "Joined the Kurumbranad Group in 2020",
+      "Began his career with a leading NBFC in Kerala",
     ],
     image: "/images/directors/director-balakrishnan.jpg",
   },

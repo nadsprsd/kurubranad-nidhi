@@ -21,14 +21,21 @@ export default function ServicesPage() {
             <h1 className="font-display text-3xl leading-tight text-navy md:text-4xl">{hero.heading}</h1>
             <p className="mt-5 text-ink/80 leading-relaxed">{hero.body}</p>
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-            {/* TODO(CLIENT): replace with approved customer-support imagery */}
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-white">
+            {/*
+              Previously used a Gold Loan branch sign photo here, which read
+              as a mismatch for visitors arriving via Savings/RD/FD cards on
+              the homepage — "I clicked Savings, why am I looking at a Gold
+              Loan sign?" Swapped for the real fixed-deposit/savings
+              promotional banner, which actually matches the content these
+              visitors are looking for.
+            */}
             <Image
-              src="/images/branches/branch-balussery.jpg"
-              alt="A financial services staff member assisting a customer at a branch desk, reviewing documents together"
+              src="/images/promotions/fd-promo-1.jpg"
+              alt="Kurumbranad Nidhi Limited savings and fixed deposit offer — rate of interest up to 12.5 percent"
               fill
               sizes="(min-width: 1024px) 560px, 100vw"
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         </div>

@@ -10,8 +10,18 @@ interface HeroCarouselProps {
 }
 
 const slides = [
-  { src: "/images/promotions/fd-promo-1.jpg", alt: "Kurumbranad Nidhi Limited fixed deposit offer, rate of interest up to 12.5 percent" },
-  { src: "/images/promotions/gold-loan-promo-2.jpg", alt: "Kurumbranad Gold Loan Dhamakka offer — lower interest, greater value" },
+  {
+    src: "/images/promotions/fd-promo-new.png",
+    alt: "Kurumbranad Gold Loan fixed deposit offer",
+  },
+  {
+    src: "/images/promotions/gold-loan-promo-2.jpg",
+    alt: "Kurumbranad Gold Loan promotional offer",
+  },
+  {
+    src: "/images/promotions/fd-standee-new.png",
+    alt: "Kurumbranad Gold Loan fixed deposit promotional standee",
+  },
 ];
 
 export function HeroCarousel({ title, primaryCta, secondaryCta }: HeroCarouselProps) {
@@ -22,7 +32,7 @@ export function HeroCarousel({ title, primaryCta, secondaryCta }: HeroCarouselPr
           {title}
         </h1>
 
-        <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-lg shadow-2xl">
+        <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-lg bg-navy-deep shadow-2xl">
           <Carousel
             ariaLabel="Current offers"
             theme="dark"
@@ -33,6 +43,9 @@ export function HeroCarousel({ title, primaryCta, secondaryCta }: HeroCarouselPr
               // slides are supplied print banners that don't all share the
               // same ratio — object-contain + a set height keeps every
               // slide readable without cropping or stretching any of them.
+              // The letterbox fill is navy-deep (matching the section
+              // background) instead of white, so any gap around a slide
+              // blends into the hero rather than showing as a stray white box.
               <div key={slide.src} className="relative h-56 w-full sm:h-72">
                 <Image
                   src={slide.src}
@@ -40,7 +53,7 @@ export function HeroCarousel({ title, primaryCta, secondaryCta }: HeroCarouselPr
                   fill
                   priority
                   sizes="(min-width: 768px) 672px, 100vw"
-                  className="object-contain bg-white"
+                  className="object-contain"
                 />
               </div>
             ))}
