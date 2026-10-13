@@ -14,8 +14,8 @@ export function Header() {
         >
           <span className="relative h-9 w-11 shrink-0">
             <Image
-              src="/images/brand/logo-icon.png"
-              alt=""
+              src="/images/brand/logo-full.png"
+              alt="kurubranad-nidhi-gold-loan"
               fill
               sizes="44px"
               className="object-contain"
