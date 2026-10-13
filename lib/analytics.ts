@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID ?? "";
+const MEASUREMENT_ID = process.env.GA4_MEASUREMENT_ID ?? "";
 
 let loaded = false;
 
