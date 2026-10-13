@@ -18,7 +18,7 @@ export function middleware(request: NextRequest) {
     `style-src 'self' 'unsafe-inline'`, // Tailwind's generated styles are inlined by Next; no inline scripts are allowed.
     `img-src 'self' data: https:`,
     `font-src 'self' data:`,
-    `connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com`,
+    `connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://stats.g.doubleclick.net`,
     `frame-ancestors 'none'`,
     `base-uri 'self'`,
     `form-action 'self'`,

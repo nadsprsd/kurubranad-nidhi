@@ -78,9 +78,9 @@ export const siteConfig = {
   },
 
   searchConsole: {
-    // Read from environment at runtime — never hardcode.
-    verificationToken: process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? "",
-  },
+  verificationToken:
+    process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? process.env.GSC_VERIFICATION ?? "",
+},
 } as const;
 
 export type SiteConfig = typeof siteConfig;
