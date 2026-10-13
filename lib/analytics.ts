@@ -1,16 +1,5 @@
 "use client";
 
-/**
- * Consent-aware Google Analytics 4 helper.
- *
- * - GA4 script only loads after loadAnalytics() is called, which should only
- *   happen once the visitor has given consent (see components' consent gate).
- * - NEXT_PUBLIC_GA4_MEASUREMENT_ID must be set in the environment; if it is
- *   missing, analytics silently no-ops so local/dev builds never error.
- * - Event helpers below intentionally accept no free-form PII: do not extend
- *   these to pass name, phone, email, or any financial figures as params.
- */
-
 declare global {
   interface Window {
     dataLayer: unknown[];
@@ -18,23 +7,23 @@ declare global {
   }
 }
 
-
-
 let loaded = false;
 
 export function loadAnalytics(measurementId: string): void {
-if (loaded || !measurementId || typeof window === "undefined") return;
+  if (loaded || !measurementId || typeof window === "undefined") return;
+
   loaded = true;
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
+  window.gtag =
+    window.gtag ||
+    function gtag(...args: unknown[]) {
+      window.dataLayer.push(args);
+    };
+
   window.gtag("js", new Date());
   window.gtag("config", measurementId, {
     anonymize_ip: true,
-    // We call page_view manually on route change; avoid GA4's automatic
-    // send-on-load double counting during client-side navigation.
     send_page_view: false,
   });
 
@@ -44,7 +33,7 @@ if (loaded || !measurementId || typeof window === "undefined") return;
   document.head.appendChild(script);
 }
 
-function track(event: string, params?: Record<string, string>) {
+function track(event: string, params?: Record<string, string | boolean>) {
   if (!loaded || typeof window === "undefined" || !window.gtag) return;
   window.gtag("event", event, params);
 }
