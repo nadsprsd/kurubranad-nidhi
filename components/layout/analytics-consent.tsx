@@ -16,7 +16,11 @@ function writeConsent(value: "granted" | "denied") {
   document.cookie = `${CONSENT_KEY}=${value}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
 }
 
-export function AnalyticsConsent() {
+export function AnalyticsConsent({
+  measurementId,
+}: {
+  measurementId: string;
+}) {
   const [consent, setConsent] = useState<"granted" | "denied" | null>(null);
   const [hydrated, setHydrated] = useState(false);
   const pathname = usePathname();
@@ -28,10 +32,10 @@ export function AnalyticsConsent() {
 
   useEffect(() => {
     if (consent === "granted") {
-      loadAnalytics();
+      loadAnalytics(measurementId);
       analytics.pageView(pathname);
     }
-  }, [consent, pathname]);
+  }, [consent, pathname, measurementId]);
 
   if (!hydrated || consent !== null) return null;
 

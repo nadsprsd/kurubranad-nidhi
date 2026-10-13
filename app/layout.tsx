@@ -57,7 +57,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <main id="main-content">{children}</main>
         <Footer />
         <WhatsappButton />
-        <AnalyticsConsent />
+        <AnalyticsConsent measurementId={process.env.GA4_MEASUREMENT_ID ?? ""} />
         <LeadPopup />
         <OrganizationJsonLd />
       </body>

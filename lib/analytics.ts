@@ -18,12 +18,12 @@ declare global {
   }
 }
 
-const MEASUREMENT_ID = process.env.GA4_MEASUREMENT_ID ?? "";
+
 
 let loaded = false;
 
-export function loadAnalytics(): void {
-  if (loaded || !MEASUREMENT_ID || typeof window === "undefined") return;
+export function loadAnalytics(measurementId: string): void {
+if (loaded || !measurementId || typeof window === "undefined") return;
   loaded = true;
 
   window.dataLayer = window.dataLayer || [];
@@ -31,7 +31,7 @@ export function loadAnalytics(): void {
     window.dataLayer.push(args);
   };
   window.gtag("js", new Date());
-  window.gtag("config", MEASUREMENT_ID, {
+  window.gtag("config", measurementId, {
     anonymize_ip: true,
     // We call page_view manually on route change; avoid GA4's automatic
     // send-on-load double counting during client-side navigation.
@@ -39,7 +39,7 @@ export function loadAnalytics(): void {
   });
 
   const script = document.createElement("script");
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
   script.async = true;
   document.head.appendChild(script);
 }
