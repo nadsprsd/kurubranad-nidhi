@@ -14,11 +14,12 @@ export const homeContent = {
     secondaryCta: { label: "Explore Gold Loan", href: "/gold-loan" },
   },
   stats: {
-    // Sourced from the client's corporate profile PDF and branch signage —
-    // real figures, not placeholders. TODO(CLIENT): reconfirm branch count
-    // if the Chalode branch's opening status has changed since the PDF was written.
+    // Sourced from the client's corporate profile PDF, branch signage, and
+    // direct client confirmation (customer count) — real figures, not
+    // placeholders.
     heading: "Kurumbranad at a glance",
     items: [
+      { label: "Happy Customers", value: "10,000+" },
       { label: "Established", value: "2020" },
       { label: "Branches", value: "5" },
       { label: "Districts served", value: "Kozhikode & Kannur" },

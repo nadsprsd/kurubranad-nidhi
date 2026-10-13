@@ -7,7 +7,7 @@ interface CarouselProps {
   ariaLabel: string;
   /** "light" (default) for use on light backgrounds; "dark" for use on navy/dark sections. */
   theme?: "light" | "dark";
-  /** Auto-advance slides every few seconds. Off by default; pauses on hover/focus, and never runs if the visitor prefers reduced motion. */
+  /** Auto-advance slides every few seconds. Off by default; pauses on mouse hover (desktop only — touch devices have no hover state, so it simply runs continuously there), and never runs if the visitor prefers reduced motion. */
   autoPlay?: boolean;
   /** Milliseconds between auto-advances. */
   autoPlayInterval?: number;
@@ -51,9 +51,15 @@ export function Carousel({
       className="relative"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
     >
+      {/*
+        onFocus/onBlur pausing was removed here — on mobile, a tap can
+        trigger a focus-like state on a child button without a matching
+        blur ever firing, which permanently stuck the carousel in a
+        paused state. This was the actual cause of "autoplay only works
+        on desktop". Keyboard-focusable controls (prev/next, dots) still
+        work fine via click/tap regardless.
+      */}
       <div className="overflow-hidden">
         <div
           className="flex transition-transform duration-300 ease-out"

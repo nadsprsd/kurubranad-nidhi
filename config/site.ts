@@ -45,7 +45,7 @@ export const siteConfig = {
     // WhatsApp should stay on this number rather than move to 8891118188.
     whatsappDisplay: "8089 099 196",
     whatsappHref: "https://wa.me/918089099196",
-    email: "nidhi.kurumbranad@gmail.com",
+    email: "kurumbranadgoldloan@gmail.com",
     // TODO(CLIENT): verified Google Maps place link — using a text-based
     // search link in the meantime so the site works day one either way.
     mapsUrl: "https://maps.google.com/?q=Kurumbranad+Nidhi+Limited+Perambra+Kozhikode+Kerala+673525",
@@ -65,8 +65,10 @@ export const siteConfig = {
   },
 
   social: {
-    facebook: "https://www.facebook.com/100083632792276/",
-    instagram: "",
+    facebook: "https://www.facebook.com/share/1HjePuvinq/?mibextid=wwXIfr",
+    instagram: "https://instagram.com/_kurumbranadgoldloan_",
+    // TODO(CLIENT): LinkedIn URL not supplied yet — add once available.
+    linkedin: "",
     youtube: "",
   },
 

@@ -13,7 +13,7 @@ export function StatsBar({ heading, items }: StatsBarProps) {
     <section className="bg-navy-deep">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <h2 className="sr-only">{heading}</h2>
-        <dl className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+        <dl className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
           {items.map((item) => (
             <div key={item.label} className="text-center">
               <dt className="text-xs font-body uppercase tracking-wide text-gold-light/80">{item.label}</dt>

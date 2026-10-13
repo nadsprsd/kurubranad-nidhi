@@ -10,18 +10,13 @@ interface HeroCarouselProps {
 }
 
 const slides = [
-  {
-    src: "/images/promotions/fd-promo-new.png",
-    alt: "Kurumbranad Gold Loan fixed deposit offer",
-  },
-  {
-    src: "/images/promotions/gold-loan-promo-2.jpg",
-    alt: "Kurumbranad Gold Loan promotional offer",
-  },
-  {
-    src: "/images/promotions/fd-standee-new.png",
-    alt: "Kurumbranad Gold Loan fixed deposit promotional standee",
-  },
+  { src: "/images/promotions/fd-promo-1.jpg", alt: "Kurumbranad Nidhi Limited fixed deposit offer, rate of interest up to 12.5 percent" },
+  { src: "/images/promotions/gold-loan-promo-2.jpg", alt: "Kurumbranad Gold Loan Dhamakka offer — lower interest, greater value" },
+  // NOTE: the 60-month row's maturity figure (₹202,729 on ₹1,00,000) does
+  // not reconcile against the 12.5% rate shown in the same row — that
+  // math only works out to about ₹162,500. Flagged to the client; not
+  // corrected here since it's their own print material reproduced as-is.
+  { src: "/images/promotions/fd-rate-table-3.jpg", alt: "Kurumbranad Nidhi Limited fixed deposit rate table on a deposit of 1,00,000 rupees" },
 ];
 
 export function HeroCarousel({ title, primaryCta, secondaryCta }: HeroCarouselProps) {
